@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2efff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(100, 80, 180, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #34246b;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.input-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+#addBtn {
+    background: #7960e8;
+    color: white;
+}
+
+#addBtn:hover {
+    background: #6045d0;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter {
+    flex: 1;
+    background: #eeeaff;
+    color: #34246b;
+}
+
+.filter.active {
+    background: #7960e8;
+    color: white;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #faf9ff;
+    border: 1px solid #eee;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.task input[type="checkbox"] {
+    flex: 0 0 auto;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.task.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.edit-btn {
+    background: #dff8f1;
+    color: #008f7a;
+}
+
+.delete-btn {
+    background: #ffe5eb;
+    color: #ff3157;
+}
+
+.task-count {
+    text-align: center;
+    margin-top: 25px;
+    color: #51457d;
+    font-size: 13px;
+    line-height: 2;
+}
+
+@media (max-width: 450px) {
+    .container {
+        padding: 20px;
+    }
+
+    .task {
+        gap: 6px;
+        padding: 9px;
+    }
+
+    .task button {
+        padding: 8px;
+    }
+
+    .task-count {
+        font-size: 11px;
+    }
+}
